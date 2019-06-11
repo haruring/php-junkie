@@ -1,0 +1,26 @@
+@charset "utf-8";
+table { border-collapse: collapse;}
+th,td {
+    text-align: center;
+    vertical-align: middle;
+    padding: .5em;
+    border: 1px solid #666;
+}
+code {
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.2;
+}
+.container {
+    display: flex;
+}
+.inner {
+    padding: 1em;
+}
+.inner.code {
+    background: rgba(250,250,250,.8);
+    border: #ccc 1px solid;
+    border-radius: .5em;
+}
+.even {
+    background: rgba(0,255,255,.2);
+}
