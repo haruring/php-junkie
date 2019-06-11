@@ -158,5 +158,77 @@ while($i < 10){
         </div>
     </div>
 </section>
+<section>
+    <h2>foreachで九九</h2>
+    <div class="container">
+        <div class="inner">
+                <table>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                    </tr>
+<?php
+$nums = array(1,2,3,4,5,6,7,8,9);
+foreach($nums as $num1){
+    echo "<tr>\n<th>".$num1."</th>\n";
+    foreach($nums as $num2){
+        $num = $num1 * $num2;
+        if($num % 2 == 0){
+            echo "<td class='even'>".$num."</td>";
+        } else {
+            echo "<td>".$num."</td>";
+        }
+    }
+    echo "</tr>\n";
+}
+?>
+            </table>
+        </div>
+        <div class="inner code">
+            <pre>
+                <code>
+                    &lt;table&gt;
+                        &lt;tr&gt;
+                            &lt;th&gt;&nbsp;&lt;/th&gt;
+                            &lt;th&gt;1&lt;/th&gt;
+                            &lt;th&gt;2&lt;/th&gt;
+                            &lt;th&gt;3&lt;/th&gt;
+                            &lt;th&gt;4&lt;/th&gt;
+                            &lt;th&gt;5&lt;/th&gt;
+                            &lt;th&gt;6&lt;/th&gt;
+                            &lt;th&gt;7&lt;/th&gt;
+                            &lt;th&gt;8&lt;/th&gt;
+                            &lt;th&gt;9&lt;/th&gt;
+                        &lt;/tr&gt;
+    &lt;?php
+    $nums = array(1,2,3,4,5,6,7,8,9);
+    foreach($nums as $num1){
+        echo "&lt;tr&gt;\n&lt;th&gt;".$num1."&lt;/th&gt;\n";
+        foreach($nums as $num2){
+            $num = $num1 * $num2;
+            if($num % 2 == 0){
+                echo "&lt;td class='even'&gt;".$num."&lt;/td&gt;";
+            } else {
+                echo "&lt;td&gt;".$num."&lt;/td&gt;";
+            }
+        }
+        echo "&lt;/tr&gt;\n";
+    }
+    ?&gt;
+                &lt;/table&gt;
+
+                </code>
+            </pre>
+        </div>
+    </div>
+</section>
 </body>
 </html>
